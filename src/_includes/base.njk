@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang or 'en' }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.name }}</title>
+  <meta name="description" content="{{ site.about or site.name }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+</head>
+<body>
+  <div class="page">
+    <header class="profile">
+      <div class="profile-main">
+        <h1 class="name">{{ site.name }}</h1>
+
+        {% if site.about %}
+        <p class="about">{{ site.about }}</p>
+        {% endif %}
+
+        {% set links = site.social | socialLinks %}
+        {% if links.length %}
+        <ul class="social" aria-label="Social links">
+          {% for item in links %}
+          <li>
+            <a
+              href="{{ item.url }}"
+              {% if item.url | isHttpUrl %}rel="noopener noreferrer" target="_blank"{% endif %}
+            >{{ item.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      {% if site.avatar %}
+      <img
+        class="avatar"
+        src="{{ site.avatar }}"
+        alt="{{ site.name }}"
+        width="140"
+        height="140"
+      />
+      {% endif %}
+    </header>
+
+    {% if content | trim %}
+    <article class="content">
+      {{ content | safe }}
+    </article>
+    {% endif %}
+  </div>
+
+  {% set footerLines = site.footer | footerLines %}
+  {% if footerLines.length %}
+  <footer class="site-footer">
+    {% for line in footerLines %}
+    <p>
+      {% if line.url %}
+      <a
+        href="{{ line.url }}"
+        {% if line.url | isHttpUrl %}rel="noopener noreferrer" target="_blank"{% endif %}
+      >{{ line.text }}</a>
+      {% else %}
+      {{ line.text }}
+      {% endif %}
+    </p>
+    {% endfor %}
+  </footer>
+  {% endif %}
+</body>
+</html>

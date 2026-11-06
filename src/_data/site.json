@@ -1,0 +1,15 @@
+{
+  "name": "lxien",
+  "about": "Software engineer with a B.S. in Software Engineering, focused on Java backend development.",
+  "avatar": "https://avatars.githubusercontent.com/u/195513923?v=4",
+  "lang": "en",
+  "url": "https://github.com/lxien",
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/lxien" },
+    { "label": "Orbien", "url": "https://lxien.github.io/orbien" }
+  ],
+  "footer": [
+    { "text": "© 2026 lxien", "url": "https://github.com/lxien" },
+    { "text": "Built with Eleventy", "url": "https://www.11ty.dev/" }
+  ]
+}
