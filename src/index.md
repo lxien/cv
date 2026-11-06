@@ -9,5 +9,4 @@ permalink: /
 
 ## Projects
 
-- [Orbien v2](https://github.com/orbien-org/orbien) — A lightweight tunneling app written in Rust (~5 MB) for securely exposing private network services to the public internet.
-- [Orbien v1](https://github.com/lxien/orbien) — A ready-to-run tunneling platform written in Java. The server includes a full admin dashboard and supports nearly all major protocols.
+- [Orbien](https://github.com/orbien-org/orbien) — A lightweight tunneling app written in Rust (~5 MB) for securely exposing private network services to the public internet.
