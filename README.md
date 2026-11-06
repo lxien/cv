@@ -79,7 +79,7 @@ Example: https://lxien.github.io/cv/
 Steps:
 
 1. If the repository is not already named `cv`, rename it under Settings → General → Repository name.
-2. Under Settings → Pages, set Source to **GitHub Actions**.
+2. Under Settings → Pages → Build and deployment, set Source to **GitHub Actions** (not “Deploy from a branch”). Branch/Jekyll builds will ignore the Eleventy layout and publish a broken page from `src/index.md`.
 3. Push to `main`. `.github/workflows/deploy.yml` builds and deploys automatically.
 
 The workflow sets the path prefix from the repository name. With a repo named `cv`, the prefix is `/cv/` and no further config is required. For a `username.github.io` user site or a custom domain, set `ELEVENTY_PATH_PREFIX` to `/`, or remove the environment variable.

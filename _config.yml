@@ -1,0 +1,6 @@
+# Safety net: this site is built with Eleventy via GitHub Actions.
+# If GitHub Pages is accidentally set to "Deploy from a branch", Jekyll
+# would otherwise pick up src/index.md (permalink: /) and publish a
+# layout-less fragment that overwrites the Eleventy deploy.
+exclude:
+  - "*"
