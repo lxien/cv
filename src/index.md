@@ -5,7 +5,7 @@ permalink: /
 
 ## Experience
 
-- Jul 2022 – Dec 2023 — Fintech company. Built foundational financial tooling and supporting platforms, with work spanning microservices.
+- Jul 2022 – Dec 2024 — Fintech company. Built foundational financial tooling and supporting platforms, with work spanning microservices.
 
 ## Projects
 
